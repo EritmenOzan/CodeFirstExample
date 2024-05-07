@@ -1,10 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Microsoft.EntityFrameworkCore;
 
-Console.WriteLine("Hello, World!");
-
-
-
 public class VesselTrackingContext : DbContext
 {
     public DbSet<Vessel> Vessels { get; set; }
@@ -21,10 +17,12 @@ public class Vessel
     public int VesselId { get; set; }
     public string VesselName { get; set; }
     public int VesselYear { get; set;}  
+    public Owner Owner { get; set; }
 }
 
 public class Owner
 {
     public int OwnerId { get; set; }
     public string OwnerName { get; set; }
+    public Vessel Vessel { get; set; }
 }
