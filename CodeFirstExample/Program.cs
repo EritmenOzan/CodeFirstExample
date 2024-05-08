@@ -29,6 +29,6 @@ public class Owner
 {
     public int OwnerId { get; set; }
     public string OwnerName { get; set; }
-    public Vessel Vessel { get; set; }
+    public ICollection<Vessel> Vessels { get; set; }
 
 }
